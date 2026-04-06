@@ -1,5 +1,5 @@
-/* ================================================
-   ADOVA BROS — style.css
+﻿/* ================================================
+   ADOVA BROS â€” style.css
    Warm, bold, street food energy. Mobile-first.
    ================================================ */
 
@@ -151,15 +151,6 @@ input, textarea, select {
   font-size: .875rem;
 }
 .btn-nav:hover { background: var(--red-dark); }
-
-.btn-order {
-  background: var(--red);
-  color: var(--white);
-  padding: .45rem 1.1rem;
-  font-size: .85rem;
-  border-radius: 999px;
-}
-.btn-order:hover { background: var(--red-dark); }
 
 .btn-lg { padding: 1rem 2.25rem; font-size: 1rem; }
 .btn-full { width: 100%; }
@@ -458,6 +449,8 @@ input, textarea, select {
 }
 
 .menu-card {
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--white);
@@ -515,6 +508,9 @@ input, textarea, select {
 }
 
 .menu-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: 1.25rem;
 }
 .menu-card-body h3 {
@@ -525,20 +521,11 @@ input, textarea, select {
   margin-bottom: .35rem;
 }
 .menu-card-body p {
+  flex: 1;
   font-size: .875rem;
   color: var(--gray-500);
   line-height: 1.5;
-  margin-bottom: 1rem;
-}
-.menu-card-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.menu-price {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--brown);
+  margin-bottom: 0;
 }
 
 .menu-cta {
@@ -552,6 +539,22 @@ input, textarea, select {
   color: var(--gray-700);
   margin-bottom: 1.25rem;
   font-size: 1rem;
+}
+.menu-promo {
+  background: var(--gold);
+  color: var(--brown);
+  display: inline-block;
+  padding: .5rem 1.25rem;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 1rem !important;
+}
+.menu-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* === CATERING === */
@@ -870,6 +873,30 @@ input, textarea, select {
 }
 .form-success p { color: var(--gray-500); font-size: .9rem; }
 
+/* === FINAL ORDER CTA === */
+.final-order-cta {
+  background: linear-gradient(160deg, var(--red-dark) 0%, var(--brown) 100%);
+  color: var(--white);
+  padding: 4rem 0;
+}
+.final-order-cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.final-order-copy p {
+  max-width: 620px;
+  color: rgba(255,255,255,.78);
+  margin-top: .85rem;
+}
+@media (min-width: 768px) {
+  .final-order-cta-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 /* === FOOTER === */
 .site-footer {
   background: var(--charcoal);
@@ -937,6 +964,14 @@ input, textarea, select {
   font-size: .8rem;
   color: rgba(255,255,255,.3);
 }
+.footer-order-cta {
+  margin-bottom: 1rem;
+}
+.footer-order-note {
+  margin-top: .75rem;
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+}
 
 /* === UTILITY === */
 [hidden] { display: none !important; }
@@ -950,3 +985,4 @@ select:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+
