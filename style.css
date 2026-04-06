@@ -1,5 +1,5 @@
 ﻿/* ================================================
-   ADOVA BROS â€” style.css
+   ADOVA BROS — style.css
    Warm, bold, street food energy. Mobile-first.
    ================================================ */
 
@@ -985,4 +985,5 @@ select:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+
 
